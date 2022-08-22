@@ -1,16 +1,12 @@
 # Design Decisions
 
-A place to document various asta project design decisions for public reference.
+A place to document various asta project design decisions for development reference.
 
 ## Process - Public Discussion
 
-1. Create a pull request by filling out the [template](TEMPLATE.MD) and saving it under a unique name.
+1. Create a pull request by filling out the [template](/AIP/aip-1.md) and saving it under a unique name.
 1. Discuss
 1. Document arguments for and against
-1. Document the decision
 1. Merge the pull request
+1. Document the decision inside [AIP](/AIP/) as well as [Spec Docs in Notion](https://almight-workshop.notion.site/Protocol-v1-da5c5820960849d18f84daad68d1ef7b)
 
-## Process - Documenting Current Policy
-
-1. Write it up
-1. Post it
