@@ -31,8 +31,6 @@ The authentication system will require:
 * Authenticate `Service` for the source of origin and permissions to use requested resources. For e.g non storage services should not be allowed to access any storage related data.
 
 
-### Permissions
-Each authenticated entity will have permission boundaries. Any entity should only uses permissioned resources and trial for crossing the boundry must result in error.
 
 ## Rationale
 [JWT](https://jwt.io/introduction) based authentication should be used to authenticate the requests. It comes with benefits of least database trips.
@@ -99,6 +97,10 @@ Project Client JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjI
 
 ## Security Considerations
 
-JWT tokens are stateless and can only be invalid once expired. In a case scenerio when single profile has multiple JWTs across devices requests for changing password, except the device making request all other JWTs remains unaffected. In case of password stealing or unfair login hacks the hacker won't be denied access upon password change.
+JWT tokens are stateless and can only be invalid once expired. In a case scenerio when single profile has multiple JWTs across devices, after request for changing the password, except the device making request all other JWTs remains unaffected. In case of password stealing or unfair login hacks the hacker won't be denied access upon password change because all other issued JWT for that profile or user will remain untouched and will be allowed to work fine untill expired.
+
+### Permissions
+Each authenticated entity will have permission boundaries. Any entity should only uses permissioned resources and trial for crossing the boundry must result in error.
+
 
 Another mechanism should be used along with the `Permission` management mechanism to control the use of such tokens.
