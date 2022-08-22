@@ -98,3 +98,7 @@ Project Client JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjI
 ```
 
 ## Security Considerations
+
+JWT tokens are stateless and can only be invalid once expired. In a case scenerio when single profile has multiple JWTs across devices requests for changing password, except the device making request all other JWTs remains unaffected. In case of password stealing or unfair login hacks the hacker won't be denied access upon password change.
+
+Another mechanism should be used along with the `Permission` management mechanism to control the use of such tokens.
