@@ -1,6 +1,6 @@
 # Design Decisions
 
-A place to document various asta project design decisions for development reference.
+A place to document various Almight project design decisions for development reference.
 
 ## Process - Public Discussion
 
