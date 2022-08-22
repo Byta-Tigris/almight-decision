@@ -5,6 +5,7 @@ status: Living
 type: Meta
 author: Piyush Jaiswal <iampiyushjaiswal103@gmail.com>
 created: 2022-08-22
+updated: 2022-08-22
 ---
 # Almight Improvement Proposals
 Amight Improvement Proposals (AIPs) describe specs and standards for the Almight platform, including the core backend, external backend services, client APIs, and contract standards.
@@ -59,9 +60,9 @@ Each AIP must begin with an RFC 822 style header preamble, preceded and followed
 
 * `status`: Draft, Review, Last Call, Final, Stagnant, Withdrawn, Living
 
-* `type`: One of Standards , Meta, or Informational
+* `type`: One of Standard , Meta, or Informational
 
-* `module`: The module / service name for which the AIP is purposed.
+* `module`: The module / service name for which the AIP is purposed. For e.g `asta/authentication` for authentication module in asta, `storage_server` for storage server.
 
 * `created`: Date the AIP was created on
 
