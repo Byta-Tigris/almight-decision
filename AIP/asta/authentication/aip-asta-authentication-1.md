@@ -9,6 +9,7 @@ module: asta/authentication
 created: 2022-08-22
 ---
 
+
 ## Abstract
 The following details the proposal of authentication system for each request handled by `asta backend`. 
 Almight backend is required to verify the request for providing better security to resources. The authentication
