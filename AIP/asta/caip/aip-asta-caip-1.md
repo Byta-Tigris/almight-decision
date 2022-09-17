@@ -5,7 +5,7 @@ status: Draft
 type: Standard
 author: Piyush Jaiswal <iampiyushjaiswal103@gmail.com>
 created: 2022-09-13
-updated: 2022-09-13
+updated: 2022-09-15
 ---
 
 
@@ -235,14 +235,14 @@ new CAIP(["eip155","1","erc721","0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb","1"
 
 
 // Matching
-let pattern = CAIP.pattern('eip155:*')
+let pattern = new CAIP('eip155:*')
 
 pattern.match('eip155:56') // true
 pattern.match('eip155:5698') // true
 pattern.match('cosmos:1') // false
 pattern.match('eip155:2:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb') //false
 
-let pattern = CAIP.pattern('eip155:1:*')
+let pattern = new CAIP('eip155:1:*')
 pattern.match('eip155:56') // false
 pattern.match('eip155:1') // false
 pattern.match('eip155:1:258') // true
@@ -266,7 +266,7 @@ pattern.match('eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb') // true
 pattern.match('eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfc562') //true
 pattern.match('eip155:1:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb') // true
 
-let pattern = CAIP.pattern('eip155:1/*:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb')
+let pattern = new CAIP('eip155:1/*:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb')
 pattern.match('eip155:1/erc721:0xab16a96d359ec26a11e2c2b3d8f8b8942d5bfcdb') // true
 
 
