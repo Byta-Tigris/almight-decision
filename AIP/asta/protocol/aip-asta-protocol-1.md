@@ -5,7 +5,7 @@ status: Draft
 type: Standard
 author: Piyush Jaiswal <iampiyushjaiswal103@gmail.com>
 created: 2022-09-20
-updated: 2022-09-21
+updated: 2022-09-22
 ---
 
 ## Title
@@ -38,6 +38,21 @@ Protocol CAIP compatible REST API based method calling
 
 
 ![Request flow](./assets/request-flow.png)
+
+
+### Flow
+
+- `CAIP digester, filter and mapper`
+    - Digest CAIP data to produce meaningful data after decoding or combining.
+    - Filter based on chain adapter mapper and/or custom rpc node
+    - Map and return the suitable chain adapter
+- `Method call`: execute procedure method 
+- `Adapter Error handler`: Converts RPC or third-party errors into Native Error.
+- `Error Handler`: Handles the response to be sent back, along with logging.
+- `Protocol Response Interceptor`: 
+    - Format the response.
+    - Logging and crediting
+
 
 ### Format of Response data
 ```ts
