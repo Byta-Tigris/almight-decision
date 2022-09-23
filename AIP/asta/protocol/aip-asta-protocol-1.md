@@ -35,7 +35,7 @@ Protocol CAIP compatible REST API based method calling
 
 * Chain adapters can provide a method for making raw rpc requests. 
 * External request from **Protocol** to the *node* or *Third-party API* will have dedicated response-error handler
-
+* Each method response must be validated again using the schema
 
 ![Request flow](./assets/request-flow.png)
 
