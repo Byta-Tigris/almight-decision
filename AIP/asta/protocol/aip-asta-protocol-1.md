@@ -109,10 +109,8 @@ interface Response {
     ```
 
 ### Component separation of CAIP data
-
-* Each property of an CAIP identifier can be divided into smaller component into the properties.
-* `__` will be used as delimiter in the property naming.
-* Each *CAIP* property begins with *caip*. If `chainId{namespace: string, reference: string}` can be divided into `caip__chainId__namespace` and `caip__chainId__reference`.
+* Component separation of CAIP is not supported yet.
+* Currently, only method of sending formatted CAIP data is encoded data.
 
 ### Expected errors
 
